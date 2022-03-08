@@ -1,0 +1,10 @@
+{
+    "name": "vucur/ets-api",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Core\\": "Core/"
+        }
+    },
+    "require": {}
+}
