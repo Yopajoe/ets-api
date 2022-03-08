@@ -96,7 +96,7 @@ class ReadOnlyController{
                 $uri .= "/" . $current_tbl;
                 if($current_id != null) $uri.= "/" . $current_id;
                 $model = new $this->mapping[$current_tbl][0]((int)$current_id);
-                $data = (array) $model;
+                $data = (array) $model->read((int)$current_id);
                 $data=$this->formatAttributesFromItem($data,$current_tbl);
                 $this->putEmbeddedConnectionsRes($output, $current_tbl, $data, [$current_tbl=> $current_id]);
                 $table_conn = false;
